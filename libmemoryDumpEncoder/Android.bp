@@ -1,0 +1,67 @@
+mtk_cc_prebuilt_library {
+    arch: {
+        arm: {
+            cortex_a53: {
+                shared_libs: [
+                    "libc",
+                    "libdl",
+                    "liblog",
+                ],
+                srcs: [
+                    "arm_armv8-a_cortex-a53/libmemoryDumpEncoder.so",
+                ],
+            },
+            cortex_a55: {
+                shared_libs: [
+                    "libc",
+                    "libdl",
+                    "liblog",
+                ],
+                srcs: [
+                    "arm_armv8-2a_cortex-a55/libmemoryDumpEncoder.so",
+                ],
+            },
+            cortex_a7: {
+                shared_libs: [
+                    "libc",
+                    "libdl",
+                    "liblog",
+                ],
+                srcs: [
+                    "arm_armv7-a-neon_cortex-a7/libmemoryDumpEncoder.so",
+                ],
+            },
+        },
+        arm64: {
+            cortex_a53: {
+                shared_libs: [
+                    "libc",
+                    "libdl",
+                    "liblog",
+                ],
+                srcs: [
+                    "arm64_armv8-a_cortex-a53/libmemoryDumpEncoder.so",
+                ],
+            },
+            cortex_a55: {
+                shared_libs: [
+                    "libc",
+                    "libdl",
+                    "liblog",
+                ],
+                srcs: [
+                    "arm64_armv8-2a_cortex-a55/libmemoryDumpEncoder.so",
+                ],
+            },
+        },
+    },
+    compile_multilib: "both",
+    mtk_product_line: "tablet",
+    mtk_src_path: "vendor/mediatek/proprietary/frameworks/opt/memoryDumpEncoder",
+    mtk_type: "cc_prebuilt_library_shared",
+    name: "libmemoryDumpEncoder",
+    strip: {
+        none: true,
+    },
+}
+
